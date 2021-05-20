@@ -1,4 +1,5 @@
 
+
 DROP DATABASE IF EXISTS Company;
 CREATE DATABASE Company;
 
@@ -148,3 +149,40 @@ INSERT INTO WORKS_ON VALUES ('987987987','30','5.0');
 INSERT INTO WORKS_ON VALUES ('987654321','30','20.0'); 
 INSERT INTO WORKS_ON VALUES ('987654321','20','15.0'); 
 INSERT INTO WORKS_ON VALUES ('888665555','20','0.0');
+
+
+-- Adding FK constraint after loading data into system
+Alter table EMPLOYEE
+ADD CONSTRAINT fk_employee_employee foreign key (superssn) references EMPLOYEE(ssn);
+
+
+--Select and show each table
+SELECT * FROM DEPARTMENT;
+SELECT * FROM DEPENDENT;
+SELECT * FROM DEPT_LOCATIONS;
+SELECT * FROM EMPLOYEE;
+SELECT * FROM PROJECT;
+SELECT * FROM WORKS_ON;
+
+
+--Selection based on condition
+
+--Q1-Select the Fname, address and salary for all female emplyess.
+SELECT fname, address, salary FROM EMPLOYEE WHERE sex='F';
+
+
+--Q2-Select the Dname, Mnr_SSN for employees with Dnumber = 5;
+SELECT dname, mgrssn FROM DEPARTMENT WHERE dnumber=5;
+
+
+--Q3-Delete from the table employee any employee whose salary is more than 80.000.
+DELETE FROM EMPLOYEE WHERE salary > 80000
+
+
+--Q4-Use alter table tp add a new column to Department table, say Production_details.
+Alter table DEPARTMENT
+ADD COLUMN Production_details varchar(50);
+
+
+--Q5-Find the Dependent _name for employee with Fname = X
+SELECT dependent_name FROM dependent,employee WHERE(employee.ssn=dependent.essn and fname='X');

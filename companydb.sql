@@ -1,12 +1,9 @@
 
-
 DROP DATABASE IF EXISTS Company;
 CREATE DATABASE Company;
 
-
 -- Creating Company Schema
 USE Company;
-
 
 --Creating DEPARTMENT table
 DROP TABLE IF EXISTS DEPARTMENT;
@@ -88,7 +85,6 @@ INSERT INTO DEPARTMENT VALUES ('Administration',4,987654321,'1995-01-01');
 INSERT INTO DEPARTMENT VALUES ('Headquarters',1,888665555,'1981-06-19');
 
 
-
 --Insert values in EMPLOYEE table
 INSERT INTO EMPLOYEE VALUES ('John','B','Smith','123456789','1955-01-09','731 Fondren, Houston, TX','M','30000.00','333445555','5'); 
 INSERT INTO EMPLOYEE VALUES ('Franklin','T','Wong','333445555','1945-12-08','638 Voss, Houston, TX','M','40000.00','888665555','5'); 
@@ -98,7 +94,6 @@ INSERT INTO EMPLOYEE VALUES ('Ramesh','K','Narayan','666884444','1952-09-15','97
 INSERT INTO EMPLOYEE VALUES ('Joyce','A','English','453453453','1962-07-31','5631 Rice, Houston, TX','F','25000.00','333445555','5'); 
 INSERT INTO EMPLOYEE VALUES ('Ahmad','V','Jabbar','987987987','1959-03-29','980 Dallas, Houston, TX','M','25000.00','987654321','4'); 
 INSERT INTO EMPLOYEE VALUES ('James','E','Borg','888665555','1927-11-10','450 Stone, Houston, TX','M','55000.00',NULL,'1'); 
-
 
 
 --Insert values in DEPENDENT table
@@ -111,15 +106,12 @@ INSERT INTO DEPENDENT VALUES ('123456789','Alice','F','1978-12-31','Daughter');
 INSERT INTO DEPENDENT VALUES ('123456789','Elizabeth','F','1967-05-06','Spouse');
 
 
-
-
 --Insert values in DEPT_LOCATIONS table
 INSERT INTO DEPT_LOCATIONS VALUES ('1','Houston'); 
 INSERT INTO DEPT_LOCATIONS VALUES ('4','Stafford'); 
 INSERT INTO DEPT_LOCATIONS VALUES ('5','Bellaire'); 
 INSERT INTO DEPT_LOCATIONS VALUES ('5','Houston'); 
 INSERT INTO DEPT_LOCATIONS VALUES ('5','Sugarland');
-
 
 
 --Insert values to PROJECT table
@@ -129,7 +121,6 @@ INSERT INTO PROJECT VALUES ('ProductZ','3','Houston','5');
 INSERT INTO PROJECT VALUES ('Computerization','10','Stafford','4'); 
 INSERT INTO PROJECT VALUES ('Reorganization','20','Houston','1'); 
 INSERT INTO PROJECT VALUES ('Newbenefits','30','Stafford','4');
-
 
 
 --Insert values to WORKS_ON table
